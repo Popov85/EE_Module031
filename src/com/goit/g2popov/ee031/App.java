@@ -1,6 +1,5 @@
 package com.goit.g2popov.ee031;
 
-import java.util.concurrent.Semaphore;
 
 /**
  * Created by Andrey on 30.08.2016.
@@ -9,8 +8,7 @@ public class App implements Runnable {
 
         private TestMulti testMulti = new TestMulti();
 
-        public static void main(String[] args) {
-                //Semaphore semaphore = new Semaphore(1);
+        public static void main(String[] args) throws InterruptedException {
                 for (int i = 0; i < 100 ; i++) {
                         new Thread(new App()).start();
                 }
